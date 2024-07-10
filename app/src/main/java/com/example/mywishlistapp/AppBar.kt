@@ -22,7 +22,7 @@ fun AppBarView(
     onBackNavClicked: () -> Unit = {}
 ) {
     val navigationIcon: (@Composable () -> Unit)? =
-        if (!title.contains("Wishlist")) {
+        if (!title.contains("WishList")) {
             {
                 IconButton(onClick = { onBackNavClicked() }) {
                     Icon(
@@ -55,17 +55,17 @@ fun AppBarView(
 @Preview(showBackground = true)
 @Composable
 fun AppBarViewPrev() {
-    AppBarView(stringResource(id = R.string.app_name), {})
+    AppBarView(stringResource(id = R.string.app_name)) {}
 }
 
 @Preview(showBackground = true)
 @Composable
 fun AppBarViewAddPrev() {
-    AppBarView(stringResource(id = R.string.add_wish), {})
+    AppBarView(stringResource(id = R.string.add_wish)) {}
 }
 
 @Preview(showBackground = true)
 @Composable
 fun AppBarViewUpdatePrev() {
-    AppBarView(stringResource(id = R.string.update_wish), {})
+    AppBarView(stringResource(id = R.string.update_wish)) {}
 }
